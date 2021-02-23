@@ -8,22 +8,25 @@
 import UIKit
 
 class DetailsViewViewController: UIViewController {
+    var currentWeather: CityWeather?
 
+    @IBOutlet weak var feelLikeLabel: UILabel!
+    @IBOutlet weak var TempLabel: UILabel!
+    
+    @IBOutlet weak var sumLabel: UILabel!
+    
+    @IBOutlet weak var cloudLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // set up label values
+        
+        feelLikeLabel.text = currentWeather?.feelsLike
+        TempLabel.text = currentWeather?.temperature
+        sumLabel.text = currentWeather?.summary
+        cloudLabel.text = currentWeather?.could
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

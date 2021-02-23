@@ -18,7 +18,7 @@ struct SecondView: View {
   }
 }
 
-class ChildHostingController: UIHostingController<SecondView> {
+class CityWeatherViewController: UIHostingController<SecondView> {
 
     required init?(coder: NSCoder) {
         super.init(coder: coder,rootView: SecondView());
